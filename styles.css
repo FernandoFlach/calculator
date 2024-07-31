@@ -1,0 +1,32 @@
+body {
+    flex:1;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:5px;
+    width:600px;
+    height: 600px;
+}
+#display {
+    height: 80px;
+    width: auto;
+    margin: 0 80px;
+}
+.buttonRow {
+    display:flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.button {
+    background-color: red;
+    height: 110px;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+}
