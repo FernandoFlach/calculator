@@ -49,6 +49,9 @@ body {
     text-align: center;
     align-content: center;
 }
+.button:hover{
+    background-color: rgb(172, 104, 36);
+}
 
 #b0 {
     flex-grow: 2;
