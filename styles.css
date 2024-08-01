@@ -17,6 +17,7 @@ body {
     border-radius: 10px;
 }
 #display {
+    height:70px;
     display:flex;
     margin: 10px;
     padding:20px;
