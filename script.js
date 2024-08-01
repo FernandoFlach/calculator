@@ -1,11 +1,7 @@
 
-var firstNumber, operator, secondNumber;
-
-var equalSignPressed;
-let lastButtonPressed;
+let firstNumber, operator, secondNumber, equalSignPressed, lastButtonPressed;
 
 const display = document.querySelector("#display")
-
 const numbers = [...document.querySelectorAll(".button")].filter((id) => id.id.includes("b"));  // Includes the operation signs
 const signs = [...document.querySelectorAll(".button")].filter((id) => id.id.includes("Sign")); // Clear, backspace, dot, equal sign
 
@@ -28,7 +24,6 @@ for (i in signs){
         signs[i].addEventListener("click", () => {
             changeDisplay("=")
             console.log("operator", operator)
-
         })
     }
     else if (id == "clearSign"){  // Clear (A/C)
@@ -37,7 +32,6 @@ for (i in signs){
             firstNumber = undefined;
             secondNumber = undefined;
             operator = undefined;
-
     })}
     else if (id == "deleteSign"){  // Backspace
         signs[i].addEventListener("click", () => {
@@ -80,16 +74,11 @@ function operate(a,b,op){
 
 
 function changeDisplay(input){
-    
-
-
     operatorFunction(input);
     equalSignFunction(input);
     numberFunction(input, lastButtonPressed);
-
     lastButtonPressed = input;
-
-
+}
 
 function operatorFunction(input){
     if ("/x-+".includes(input)){
@@ -97,12 +86,12 @@ function operatorFunction(input){
             firstNumber = display.textContent;
             operator = input; 
         }
+
         else {
             secondNumber = display.textContent;
             firstNumber = operate(firstNumber,secondNumber,operator);
             display.textContent = firstNumber;
             operator = input;
-
         }
     }
 }
@@ -132,5 +121,4 @@ function numberFunction(input,lastInput){
             display.textContent += input;
         }
     }
-
-}}
+}
